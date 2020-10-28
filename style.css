@@ -1,438 +1,671 @@
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: hidden;
+}
+
+#check {
+    display: none;
+}
+
+header {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.icon,
+.sub {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.header .head {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head h2 {
+    font-family: 'Lobster', cursive;
+}
+
+.head h2::first-letter {
+    color: #ff0000;
+}
+
+.header .socials {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.header .socials a {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+}
+
+.bar {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 5px 8px;
+}
+
+.fa-facebook {
+    color: #3a3aee;
+}
+
+.fa-twitter {
+    color: #1e90ff;
+}
+
+.fa-linkedin {
+    color: #086cd1;
+}
+
+.fa-bell {
+    color: #f71201;
+    font-size: 1.4rem;
+}
+
+.fa-hamburger {
+    font-size: 1.4rem;
+    color: #b97331;
+}
+
+header .icon {
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar {
+    position: absolute;
+    top: 8vh;
+    left: -50rem;
+    width: 100%;
+    height: 9vh;
+    background-color: #272626;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.navbar ul li {
+    list-style-type: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+
+#check:checked~.navbar {
+    position: initial;
+    opacity: 1;
+    border: 1px solid #272626;
+}
+
+#check:checked~header .icon {
+    background-color: #272626;
+    border: 1px solid #272626;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+}
+
+.banner {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5) 70%, transparent), url('./images/pexels-dana-tentis-691114.jpg') center/cover no-repeat;
+    animation: image 30s ease-in-out 0.2s infinite;
+}
+
+@keyframes image {
+    40% {
+        background: linear-gradient(rgba(0, 0, 0, 0.5) 70%, transparent), url('./images/pexels-daria-shevtsova-3626606.jpg') center/cover no-repeat;
     }
-    
-    .container {
-        min-height: 100vh;
-        width: 100vw;
-        overflow: hidden;
+    80% {
+        background: linear-gradient(rgba(0, 0, 0, 0.5) 70%, transparent), url('./images/pexels-cottonbro-3298605.jpg') center/cover no-repeat;
     }
-    
-    #check {
-        display: none;
-    }
-    
+}
+
+.banner-content {
+    width: 80%;
+    color: #fff;
+}
+
+.banner-content h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.banner-content p {
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.banner-content p::first-letter {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.banner-content .link {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.link a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: #149b14;
+    margin-left: 8px;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.link a:hover,
+.link a:active {
+    background-color: #0d490d;
+}
+
+.link>a:nth-last-child(1) {
+    background-color: #f71201;
+}
+
+.link>a:hover:nth-last-child(1),
+.link>a:active:nth-last-child(1) {
+    background-color: #f05c52;
+}
+
+main .detail {
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    flex-flow: column;
+}
+
+.detail .services {
+    min-height: 15vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.service {
+    height: 15vh;
+    display: flex;
+    flex-flow: column;
+}
+
+.desp-1 {
+    height: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desp-1>span {
+    border: 2px solid #086cd1;
+    border-radius: 200px;
+    padding: 11px 10px;
+    text-align: center;
+}
+
+.desp-1 .fa-paper-plane,
+.desp-1 .fa-star,
+.desp-1 .fa-bicycle {
+    color: #1e90ff;
+    font-size: 1.4rem;
+}
+
+.service h4 {
+    height: 50%;
+    display: inline-flex;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.detail .description {
+    min-height: 25vh;
+    display: flex;
+}
+
+.description .rating {
+    width: 50%;
+    min-height: 12.5vh;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #272626;
+}
+
+.rating .stars {
+    display: flex;
+    height: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #086cd1;
+}
+
+.rating h3 {
+    text-align: center;
+}
+
+.description .info {
+    width: 50%;
+    min-height: 12.5vh;
+    display: flex;
+    flex-flow: column;
+    padding: 10px 5px;
+}
+
+.info h3 {
+    text-align: center;
+}
+
+.info p {
+    text-align: center;
+}
+
+.subscribe {
+    margin-top: 10px;
+}
+
+.subscribe span {
+    display: block;
+    text-align: center;
+}
+
+.subscribe a {
+    display: block;
+    padding: 5px 10px;
+    text-align: center;
+    border: 2px solid #f71201;
+    border-radius: 10px;
+    background-color: #f71201;
+}
+
+.subscribe a .fa-bell {
+    color: #fff;
+}
+
+main .gallery {
+    display: none;
+}
+
+main .card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0px;
+}
+
+.card .profile {
+    display: flex;
+    width: 80%;
+    flex-flow: column;
+    align-items: stretch;
+    border: 2px solid #f71201;
+    border-radius: 5px;
+    padding: 8px;
+    box-shadow: 2px 3px 5px grey;
+}
+
+.profile h3 {
+    text-align: center;
+    margin-bottom: 5px;
+    color: #086cd1;
+}
+
+.profile h4 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.profile .img {
+    height: 350px;
+    width: 100%;
+}
+
+.img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.profile p {
+    margin-top: 10px;
+}
+
+.profile .accounts {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.accounts a {
+    padding: 8px;
+    font-size: 1.2rem;
+}
+
+.accounts a:hover,
+.accounts a:active {
+    color: red;
+}
+
+footer {
+    display: grid;
+    min-height: 40vh;
+    background-color: #272626;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 8px;
+    gap: 8px;
+    padding: 20px;
+    color: #f0f8ff;
+}
+
+.snacks ul,
+.country ul,
+.continental ul {
+    display: flex;
+    flex-flow: column;
+}
+
+.snacks ul a,
+.country ul a,
+.continental ul a {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.snacks ul a:active,
+.country ul a:active,
+.continental ul a:active {
+    color: #1e90ff;
+}
+
+.contact {
+    grid-area: 2/1/3/4;
+    padding: 12px;
+}
+
+.contact span {
+    display: block;
+    margin-top: 15px;
+}
+
+.fa-whatsapp {
+    color: rgb(42, 184, 42);
+    font-size: 1.4rem;
+    margin-left: 1rem;
+}
+
+.contact .fa-facebook {
+    color: #4343fc;
+    font-size: 1.4rem;
+}
+
+@media screen and (min-width:360px) {
     header {
-        height: 70vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        background: url('./images/pexels-garrett-morrow-1337247.jpg') center/cover no-repeat;
-        color: #fff;
+        height: 12vh;
     }
-    
-    .head-wrapper {
-        height: 13%;
-        display: flex;
-        padding: 10px;
-    }
-    
-    .head {
-        margin-left: 10px;
-    }
-    
-    label {
-        position: relative;
-        margin-left: auto;
-        margin-right: 10px;
-        width: 13%;
-        height: 8vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.5s;
-    }
-    
-    label .fa-bars,
-    label .fa-times {
-        font-size: 1.8rem;
-        transform: translateY(-5px);
-        transition: all 0.5s;
-    }
-    
-    .fa-times {
-        position: absolute;
-        opacity: 0;
-    }
-    
     .navbar {
-        position: absolute;
-        top: 9.1%;
-        left: 0;
-        width: 100%;
-        height: 10%;
-        pointer-events: none;
-        opacity: 0;
-        transition: all 0.5s;
+        height: 13vh;
     }
-    
-    .navbar ul {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        background-color: #f32727;
+    main .banner {
+        height: 55vh;
     }
-    
-    .navbar ul a {
-        text-decoration: none;
-        font-size: 0.85rem;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: #fff;
-        padding: 10px;
-        transition: all 0.5s;
+    main .detail {
+        padding: 1.8rem 0.5rem;
     }
-    
-    #check:checked+header .head-wrapper .navbar {
-        pointer-events: initial;
-        opacity: 1;
+}
+
+@media screen and (min-width: 600px) {
+    header {
+        height: 10vh;
     }
-    
-    #check:checked+header .head-wrapper label {
-        background-color: #f32727;
+    .navbar {
+        height: 10vh;
     }
-    
-    #check:checked+header .head-wrapper .fa-bars {
-        opacity: 0;
+    .banner {
+        background: linear-gradient(rgba(0, 0, 0, 0.5) 70%, transparent), url('./images/medium/pexels-dana-tentis-691114.jpg') center/cover no-repeat;
+        animation: image 30s ease-in-out 0.2s infinite;
     }
-    
-    #check:checked+header .head-wrapper .fa-times {
-        opacity: 1;
-    }
-    
-    .navbar a:hover {
-        border-bottom: 2.5px solid #0381ff;
-    }
-    
-    .fa-gamepad {
-        margin-right: 0.5rem;
-        font-size: 1.2rem;
-        color: black;
-    }
-    
-    .head-writing {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        flex-flow: column;
-        align-items: center;
-        padding: 7px;
-    }
-    
-    .head-writing p,
-    .head-writing h1 {
-        margin-bottom: 12px;
-        transform: translate(0px, -50%);
-    }
-    
-    main {
-        min-height: 70vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .section1 {
-        min-height: 70vh;
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: minmax(30vh, auto);
-        grid-gap: 8px;
-        gap: 8px;
-    }
-    
-    .description {
-        border: 1.5px solid #f32727;
-        border-radius: 1rem;
-        margin-top: 5px;
-        margin-left: 5px;
-        padding: 10px;
-    }
-    
-    .description h2 {
-        text-align: center;
-        color: #f32727;
-        margin: 0.5rem;
-    }
-    
-    .special {
-        background-color: #312f2f;
-        color: #fff;
-    }
-    
-    .special-p {
-        display: none;
-    }
-    
-    .special-h2 {
-        display: none;
-    }
-    
-    .logbar {
-        grid-column: 1/5;
-        grid-row: 2;
-        position: relative;
-    }
-    
-    .logbar img {
-        width: 100%;
-        display: block;
-    }
-    
-    .logbar .content {
-        padding: 0.5rem;
-        width: 100%;
-        height: 20%;
-        top: 80px;
-        position: absolute;
-        background-color: #fff;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .content p {
-        font-size: 1.1rem;
-        font-weight: bold;
-        color: #f32727 #312f2f;
-        text-align: center;
-        margin-bottom: 10px;
-        text-transform: capitalize;
-    }
-    
-    .content div {
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .content div a {
-        text-decoration: none;
-        padding: 0.9rem 3rem;
-        border-radius: 5px;
-        color: #fff;
-        background: linear-gradient(-45deg, #1e90ff 30%, #c873fa, #e73c7e, #23A6d5);
-        animation: colors 10s ease-in-out infinite;
-    }
-    
-    @keyframes colors {
-        20% {
-            background: linear-gradient(45deg, #1e90ff, #c873fa, #e73c7e, #23A6d5);
-        }
-        30% {
-            background-position: 50% 100%;
-        }
-        50% {
-            background: linear-gradient(-45deg, #c873fa, #e73c7e, #1e90ff, #23A6d5);
-            background-position: 100% 50%;
-        }
-        70% {
-            background-position: 50% 0%;
-            color: #5ef75e;
+    @keyframes image {
+        40% {
+            background: linear-gradient(rgba(0, 0, 0, 0.5) 70%, transparent), url('./images/medium/pexels-daria-shevtsova-3626606.jpg') center/cover no-repeat;
         }
         80% {
-            background: linear-gradient(45deg, #c873fa, #1e90ff, #23A6d5, #e73c7e);
-            background-position: 0% 100%;
-        }
-        100% {
-            background-position: 100% 0%;
+            background: linear-gradient(rgba(0, 0, 0, 0.5) 70%, transparent), url('./images/medium/pexels-cottonbro-3298605.jpg') center/cover no-repeat;
         }
     }
-    
-    .section2 {
-        height: auto;
-        display: flex;
+    main .detail {
+        padding: 1.8rem 3rem;
+    }
+    .info h3 {
+        font-size: 1.4rem;
+    }
+    .info p {
+        font-size: 1.2rem;
+    }
+    .subscribe span {
+        color: #086cd1;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    .card .profile {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .sub,
+    .icon {
+        display: none;
+    }
+    header {
         align-items: center;
         justify-content: center;
-    }
-    
-    .secwrapper {
-        width: 50%;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .secwrapper .dp {
-        height: 100px;
-        width: 100px;
-        border-radius: 1000px;
         position: relative;
-        top: 50px;
     }
-    
-    .dp img {
-        height: 100%;
-        width: 100%;
-        display: block;
-        border-radius: 1000px;
+    .header .socials {
+        position: absolute;
+        left: 40vw;
     }
-    
-    .profile {
-        height: auto;
-        min-width: 240px;
-        border: 1px solid rgba(243, 39, 39, 0.9);
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        padding-top: 4.5rem;
-        padding-bottom: 3rem;
+    .navbar {
+        left: 15vw;
+        top: 5vh;
+        opacity: 1;
+        height: 5vh;
+        width: 70%;
+        background-color: #fff;
     }
-    
-    .profile p,
-    .profile h2,
-    .profile h4 {
-        margin-bottom: 5px;
+    .navbar ul {
+        flex-flow: row nowrap;
     }
-    
-    .profile h2 {
-        color: #222020;
+    .navbar ul li a {
+        color: #272626;
+        font-size: 1.1rem;
     }
-    
-    .profile h4 {
-        color: #686464;
-    }
-    
-    .profile p {
-        text-align: center;
-        color: #363535;
-    }
-    
-    .profile .socials {
-        width: 100%;
-        height: 20%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    
-    .fa-facebook,
-    .fa-twitter,
-    .fa-envelope {
-        font-size: 1.8rem;
-        border: 2px solid #f32727;
-        padding: 5px;
-        border-radius: 1000px;
-    }
-    
-    footer {
-        min-height: 20vh;
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        grid-auto-rows: minmax(10vh, auto);
-        grid-gap: 10px;
-        gap: 10px;
-        padding: 40px 10px;
-        background-color: #222020;
-    }
-    
-    .footnav {
-        height: auto;
-        grid-column: 1/3;
-        padding: 0 10px;
-    }
-    
-    .footnav ul {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-evenly;
-        color: #f32727;
-    }
-    
-    .footnav ul li {
-        list-style-type: none;
-    }
-    
-    .footnav ul a {
-        text-decoration: none;
-        color: #fff;
-    }
-    
-    .footnav a:hover {
+    .navbar ul li a:hover,
+    .navbar ul li a:active {
         color: #1e90ff;
     }
-    
-    .sponsors {
-        grid-column: 1/5;
-        grid-row: 2;
+    .banner .banner-content {
+        width: 50%;
     }
-    
-    .sponsors img {
-        height: 50px;
-        max-width: 100px;
-        margin-left: 5px;
+    main .detail {
+        flex-flow: row nowrap;
     }
-    
-    @media screen and (max-width: 490px) {
-        .description {
-            display: none;
-        }
-        .special {
-            display: block;
-            grid-column: 1/5;
-            margin: 10px;
-        }
-        .normal {
-            display: none;
-        }
-        .special-p {
-            display: block;
-        }
-        .special-h2 {
-            display: block;
-        }
+    .detail .services {
+        flex-flow: column nowrap;
+        width: 50%;
     }
-    
-    @media screen and (min-width:900px) {
-        label {
-            display: none;
-        }
-        header {
-            background: url('./images/middle/pexels-garrett-morrow-1337247.jpg') center/cover no-repeat;
-        }
-        .head {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .fa-gamepad {
-            color: #f32727;
-        }
-        .head h1 {
-            transform: translateY(-30%);
-        }
-        .navbar {
-            height: 100%;
+    .service {
+        flex-flow: row nowrap;
+    }
+    .service h4 {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        font-size: 1.3rem;
+    }
+    .description {
+        flex-flow: column nowrap;
+        border: 2px solid #272626;
+    }
+    .description .rating {
+        width: 100%;
+        font-size: 1.3rem;
+        border: none;
+    }
+    .description .info {
+        width: 100%;
+        height: auto;
+        margin-top: 4rem;
+    }
+    .info h3 {
+        font-size: 1.5rem;
+    }
+    .info p {
+        font-size: 1.5rem;
+    }
+    .description .subscribe {
+        margin-top: 9rem;
+    }
+    .description .subscribe span {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+    .subscribe a {
+        width: 50%;
+        padding: 10px;
+        margin-left: 10rem;
+    }
+    main .gallery {
+        display: grid;
+        width: 100%;
+        background-color: #272626;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(200px, auto);
+        justify-items: center;
+        grid-gap: 5px;
+        gap: 5px;
+        overflow: hidden;
+    }
+    .gallery img {
+        opacity: 0.8;
+        display: block;
+        animation: img 10s ease 0.2s infinite;
+    }
+    @keyframes img {
+        40% {
+            transform: scale(1.3, 1.3);
             opacity: 1;
-            position: static;
-            pointer-events: initial;
+            justify-self: end;
+            align-self: end;
         }
-        .navbar ul {
-            background-color: transparent;
-        }
-        main .section1 .logbar img {
-            display: none;
-        }
-        .logbar {
-            background-color: #222020;
-            color: #fff;
-        }
-        .logbar .content {
-            background-color: inherit;
+        80% {
+            transform: scale(1, 1);
+            opacity: 0.98;
+            ustify-self: left;
+            align-self: start;
         }
     }
-    
-    @media screen and (min-width:1200px) {
-        header {
-            background: url('./images/large/pexels-garrett-morrow-1337247.jpg') center/cover no-repeat;
+    .gallery h1 {
+        grid-area: 3/1/4/5;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 3.5rem;
+        color: #fff;
+        opacity: 0.95;
+    }
+    .card .profile {
+        width: 40%;
+    }
+    .card .profile h3 {
+        font-size: 1.5rem;
+    }
+    .profile h4 {
+        font-size: 1..3rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    header {
+        height: 12vh;
+    }
+    main .banner {
+        height: 70vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5) 70%, transparent), url('./images/large/pexels-dana-tentis-691114.jpg') center/cover no-repeat;
+        animation: image 30s ease-in-out 0.2s infinite;
+    }
+    @keyframes image {
+        40% {
+            background: linear-gradient(rgba(0, 0, 0, 0.5) 70%, transparent), url('./images/large/pexels-daria-shevtsova-3626606.jpg') center/cover no-repeat;
+        }
+        80% {
+            background: linear-gradient(rgba(0, 0, 0, 0.5) 70%, transparent), url('./images/large/pexels-cottonbro-3298605.jpg') center/cover no-repeat;
         }
     }
+    main .detail {
+        padding: 3rem 15rem;
+    }
+    main .gallery {
+        width: 80%;
+        height: 70vh;
+        margin-left: 10rem;
+    }
+    .card .profile {
+        width: 25%;
+    }
+}

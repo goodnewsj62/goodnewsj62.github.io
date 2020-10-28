@@ -1,1 +1,1 @@
-#This is a practice html and css code
+#HTML and CSS practice
