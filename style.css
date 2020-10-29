@@ -235,7 +235,7 @@ main .detail {
 }
 
 .service {
-    height: 15vh;
+    height: auto;
     display: flex;
     flex-flow: column;
 }
@@ -451,7 +451,22 @@ footer {
 
 @media screen and (min-width:360px) {
     header {
-        height: 12vh;
+        height: auto;
+    }
+    .icon {
+        height: auto;
+    }
+    .sub {
+        height: inherit;
+    }
+    header .header {
+        height: inherit;
+    }
+    .head {
+        padding: 10px;
+    }
+    .socials {
+        padding-top: 5px;
     }
     .navbar {
         height: 13vh;
@@ -462,12 +477,22 @@ footer {
     main .detail {
         padding: 1.8rem 0.5rem;
     }
+    .detail .services {
+        height: auto;
+    }
+    .services .service {
+        height: inherit;
+    }
+    .service .desp-1 {
+        height: inherit;
+    }
+    .service h4 {
+        height: inherit;
+        margin-top: 20px;
+    }
 }
 
 @media screen and (min-width: 600px) {
-    header {
-        height: 10vh;
-    }
     .navbar {
         height: 10vh;
     }
