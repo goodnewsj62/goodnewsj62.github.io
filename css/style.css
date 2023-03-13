@@ -596,11 +596,13 @@ content: "";
 
 .tech{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
 }
 
 .techs{
     padding: 2rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 } 
 
 .each__tech{
@@ -620,7 +622,7 @@ content: "";
 }
 
 .each__tech img{
-    width: 60px;
+    width: 55px;
     border-radius: 8px;
 }
 
