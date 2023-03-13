@@ -603,6 +603,7 @@ content: "";
     padding: 2rem 4rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1rem 1rem;
 } 
 
 .each__tech{
@@ -768,6 +769,9 @@ content: "";
 }
 
 @media screen and (max-width:820px) {
+    .techs{
+        display: block;
+    }
     .mockup{
         width: 400px;
     }
