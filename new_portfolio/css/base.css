@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #8973ef;
+  --secondary-color: #fcda69ff;
+  --white-bg-write: #5b6268;
+  --app-black: #292929;
+}
+
+@font-face {
+  font-family: Gantari;
+  font-style: italic;
+  src: url(../fonts/Gantari-Italic-VariableFont_wght.ttf) format("truetype");
+}
+@font-face {
+  font-family: Gantari;
+  font-style: normal;
+  src: url(../fonts/Gantari-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Paytone One";
+  font-style: normal;
+  src: url(../fonts/PaytoneOne-Regular.ttf) format("truetype");
+}
+
+html {
+  font-family: "Ubuntu", sans-serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  font-family: Gantari, sans-serif;
+}
+
+.container {
+  width: 100%;
+}
+
+.center__on__xl {
+  max-width: 1300px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  padding: 1rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Paytone One";
+  font-size: 26px;
+}
+
+header nav ul {
+  display: none;
+  list-style: none;
+  gap: 2.6rem;
+  text-transform: capitalize;
+  color: var(--white-bg-write);
+  font-weight: 500;
+}
+
+aside {
+  display: none;
+  position: fixed;
+}
+
+footer {
+  color: #fff;
+  background-color: var(--app-black);
+  padding: 6rem 1rem 1rem 1rem;
+}
+
+@media screen and (min-width: 760px) {
+  header {
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header nav ul {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1400px) {
+  header {
+    padding: 1rem 4rem;
+  }
+}

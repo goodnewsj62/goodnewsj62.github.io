@@ -1,0 +1,183 @@
+.hero {
+  padding: 6rem 1rem;
+  position: relative;
+  display: flex;
+}
+
+.hello {
+  color: var(--primary-color);
+  font-weight: bold;
+  display: block;
+  font-family: "Paytone One";
+  font-size: 20px;
+}
+
+.hero__text h1 {
+  font-family: "Paytone One";
+  font-size: 35px;
+}
+
+.descp {
+  font-style: italic;
+  display: flex;
+  align-items: end;
+}
+
+.descp span {
+  /* margin-top: auto; */
+  display: block;
+  width: 20px;
+  height: 4px;
+  border-radius: 10px;
+  margin-left: 2px;
+  background-color: var(--primary-color);
+}
+
+.hero__text p {
+  padding: 8px 0px;
+  color: var(--white-bg-write);
+  /* font-size: 20px; */
+}
+
+.header__socials ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 40px;
+  padding-top: 1rem;
+}
+
+.header__socials img {
+  width: 24px;
+}
+.hero__image {
+  position: relative;
+  display: flex;
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll_indicator {
+  position: absolute;
+}
+
+.my__img {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 760px) {
+  .hero__text h1 {
+    font-size: 60px;
+  }
+
+  .hero {
+    padding: 6rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero__text,
+  .hero__image {
+    flex-basis: 50%;
+  }
+
+  .hero__image {
+    display: flex;
+  }
+
+  .hero__text h1 {
+    font-size: 50px;
+  }
+  .hero__image img {
+    width: 460px;
+  }
+
+  .header__socials ul {
+    gap: 30;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .hero {
+    padding: 6rem 4rem;
+  }
+  .hero__text h1 {
+    font-size: 60px;
+  }
+
+  .hero__image img {
+    width: 480px;
+  }
+}
+
+.section__title {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1rem;
+  padding-bottom: 0.6rem;
+}
+.services {
+  padding: 0rem 1rem;
+}
+
+.projects {
+  padding: 4rem 1rem;
+}
+
+.services__wrapper {
+  width: 100%;
+  display: flex;
+}
+
+@media screen and (min-width: 760px) {
+  .services {
+    padding: 0rem 2rem;
+  }
+
+  .projects {
+    padding: 4rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .services {
+    padding: 8rem 2rem 2rem 2rem;
+  }
+
+  .projects {
+    padding: 2rem 2rem 4rem 2rem;
+  }
+
+  .services__wrapper > section {
+    flex-basis: 50%;
+  }
+
+  .frontend,
+  .backend {
+    padding: 5rem 3rem;
+    border-radius: 10px 0 0 10px;
+  }
+  .frontend p,
+  .backend p {
+    max-width: 40ch;
+    padding-top: 0.5rem;
+  }
+
+  .frontend {
+    background: var(--secondary-color);
+    clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .services {
+    padding: 10rem 4rem 2rem 4rem;
+  }
+
+  .projects {
+    padding: 2rem 4rem 4rem 4rem;
+  }
+}
