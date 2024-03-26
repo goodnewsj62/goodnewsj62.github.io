@@ -6,7 +6,7 @@
 
 :root {
   --primary-color: #8973ef;
-  --secondary-color: #fcda69ff;
+  --secondary-color: #fcda69;
   --white-bg-write: #5b6268;
   --app-black: #292929;
 }
@@ -20,6 +20,10 @@
   font-family: Gantari;
   font-style: normal;
   src: url(../fonts/Gantari-VariableFont_wght.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Fira Code";
+  src: url(../fonts/FiraCode-VariableFont_wght.ttf) format("truetype");
 }
 
 @font-face {
@@ -56,6 +60,8 @@ header {
   padding: 1rem 1rem;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 100;
 }
 
 .logo {

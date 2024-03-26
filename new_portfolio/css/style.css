@@ -76,7 +76,7 @@
   }
 
   .hero {
-    padding: 6rem 2rem;
+    padding: 6.4rem 2rem;
   }
 }
 
@@ -115,9 +115,10 @@
 }
 
 .section__title {
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
   font-weight: bold;
-  font-size: 1rem;
+  font-family: "Fira Code";
+  /* font-size: 1.5rem; */
   padding-bottom: 0.6rem;
 }
 .services {
@@ -131,6 +132,57 @@
 .services__wrapper {
   width: 100%;
   display: flex;
+}
+
+.side__one,
+.side__two {
+  position: relative;
+  padding: 0 1rem;
+  line-height: 1.8rem;
+}
+.side__one .project__content:first-child,
+.side__two .project__content:first-child {
+  padding-bottom: 4rem;
+}
+
+.side__one :where(h4, a, p) {
+  display: block;
+  text-align: right;
+}
+
+.side__one .project__tech {
+  justify-content: flex-end;
+}
+
+.project__content p {
+  color: var(--white-bg-write);
+}
+
+.project__tech {
+  font-family: "Fira Code";
+  font-size: 0.9rem;
+  display: flex;
+  gap: 0 1.5rem;
+  flex-wrap: wrap;
+}
+.side__one::before {
+  content: "";
+  position: absolute;
+  max-height: 440px;
+  top: 50%;
+  right: 0;
+  height: 120%;
+  transform: translateY(-50%);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.side__two {
+  padding-top: 3.5rem;
+}
+
+.sides a {
+  color: var(--primary-color);
+  font-weight: bold;
 }
 
 @media screen and (min-width: 760px) {
@@ -149,7 +201,7 @@
   }
 
   .projects {
-    padding: 2rem 2rem 4rem 2rem;
+    padding: 8rem 2rem 4rem 2rem;
   }
 
   .services__wrapper > section {
@@ -171,13 +223,162 @@
     background: var(--secondary-color);
     clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%);
   }
+
+  .projects__wrapper {
+    display: grid;
+    width: 100%;
+    gap: 2rem;
+    padding: 2rem 0;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .main__projects {
+    grid-column: span 8;
+  }
+
+  .stack {
+    grid-column: span 4;
+    height: 100%;
+  }
+  ._divide {
+    display: flex;
+  }
+  .sides {
+    flex-basis: 50%;
+  }
+
+  .side__one .project__content > * {
+    max-width: 40ch;
+    margin-left: auto;
+  }
+
+  .lg__techlist {
+    height: 100%;
+  }
+
+  .frontend__stack,
+  .backend__stack {
+    width: 100%;
+    border-radius: 30px;
+    padding: 4rem 1rem;
+    height: 100%;
+    /* background-color: var(--secondary-color); */
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .stack {
+    position: relative;
+  }
+
+  .backend__stack {
+    /* color: #fff; */
+    background: var(--secondary-color);
+    clip-path: circle(12% at 100% 0%);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .backend__stack > div {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 0.68rem;
+    font-size: small;
+    font-weight: bold;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+  }
+
+  .backend__stack .jam {
+    font-size: 1.5rem;
+  }
+
+  ul :has(.backend__stack, .frontend__stack) {
+    list-style: none;
+  }
+
+  .frontend__stack li,
+  .backend__stack li {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .frontend__stack li .img,
+  .backend__stack li .img {
+    order: 2;
+  }
+
+  .frontend__stack li h6,
+  .backend__stack li h6 {
+    font-size: 1rem;
+  }
+
+  .frontend__stack li img,
+  .backend__stack li img {
+    width: 1.8rem;
+  }
 }
+
 @media screen and (min-width: 1400px) {
   .services {
     padding: 10rem 4rem 2rem 4rem;
   }
 
   .projects {
-    padding: 2rem 4rem 4rem 4rem;
+    padding: 8rem 4rem 4rem 4rem;
+  }
+}
+
+/* About */
+
+.about {
+  padding: 2rem 1rem 8rem 1rem;
+}
+
+.about__wrapper {
+  display: flex;
+}
+
+.about__wrapper > p {
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+.about__wrapper > div {
+  width: 100%;
+  display: none;
+}
+
+.img_holder {
+  width: 68%;
+
+  height: 230px;
+  background-image: url("../images/IMG_6058.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 4.5rem;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 760px) {
+  .about {
+    padding: 2rem 2rem 8rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .about__wrapper > p {
+    max-width: 80ch;
+  }
+  .about__wrapper > div {
+    display: block;
   }
 }
