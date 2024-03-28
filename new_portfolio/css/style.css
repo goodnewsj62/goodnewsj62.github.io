@@ -1,5 +1,5 @@
 .hero {
-  padding: 6rem 1rem;
+  padding: 6rem 0rem;
   position: relative;
   display: flex;
 }
@@ -76,7 +76,7 @@
   }
 
   .hero {
-    padding: 6.4rem 2rem;
+    padding: 6.4rem 0;
   }
 }
 
@@ -103,7 +103,7 @@
 }
 @media screen and (min-width: 1400px) {
   .hero {
-    padding: 6rem 4rem;
+    padding: 6rem 0rem;
   }
   .hero__text h1 {
     font-size: 60px;
@@ -120,13 +120,6 @@
   font-family: "Fira Code";
   /* font-size: 1.5rem; */
   padding-bottom: 0.6rem;
-}
-.services {
-  padding: 0rem 1rem;
-}
-
-.projects {
-  padding: 4rem 1rem;
 }
 
 .services__wrapper {
@@ -186,24 +179,9 @@
 }
 
 @media screen and (min-width: 760px) {
-  .services {
-    padding: 0rem 2rem;
-  }
-
-  .projects {
-    padding: 4rem 2rem;
-  }
 }
 
 @media screen and (min-width: 1024px) {
-  .services {
-    padding: 8rem 2rem 2rem 2rem;
-  }
-
-  .projects {
-    padding: 8rem 2rem 4rem 2rem;
-  }
-
   .services__wrapper > section {
     flex-basis: 50%;
   }
@@ -328,20 +306,9 @@
 }
 
 @media screen and (min-width: 1400px) {
-  .services {
-    padding: 10rem 4rem 2rem 4rem;
-  }
-
-  .projects {
-    padding: 8rem 4rem 4rem 4rem;
-  }
 }
 
 /* About */
-
-.about {
-  padding: 2rem 1rem 8rem 1rem;
-}
 
 .about__wrapper {
   display: flex;
@@ -369,9 +336,6 @@
 }
 
 @media screen and (min-width: 760px) {
-  .about {
-    padding: 2rem 2rem 8rem 2rem;
-  }
 }
 
 @media screen and (min-width: 1400px) {

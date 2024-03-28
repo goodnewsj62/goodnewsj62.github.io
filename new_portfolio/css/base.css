@@ -7,8 +7,17 @@
 :root {
   --primary-color: #8973ef;
   --secondary-color: #fcda69;
+  /* --secondary-color: #fce498; */
   --white-bg-write: #5b6268;
   --app-black: #292929;
+  --bulb-black: var(--app-black);
+  --lg-screen-space-btw: calc(calc(100% - 1300px) / 2);
+  --bulb-light-gradient: radial-gradient(
+    circle,
+    rgba(252, 218, 105, 1) 0%,
+    rgba(252, 218, 105, 0.159278711484594) 50%,
+    rgba(252, 218, 105, 0.085609243697479) 100%
+  );
 }
 
 @font-face {
@@ -33,7 +42,6 @@
 }
 
 html {
-  font-family: "Ubuntu", sans-serif;
   line-height: 1.5;
   scroll-behavior: smooth;
   font-family: Gantari, sans-serif;
@@ -68,6 +76,16 @@ header {
   font-family: "Paytone One";
   font-size: 26px;
 }
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 52px;
+  margin-right: 0.2rem;
+  margin-bottom: 8px;
+}
 
 header nav ul {
   display: none;
@@ -78,11 +96,117 @@ header nav ul {
   font-weight: 500;
 }
 
+.bulb,
+.argon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bulb {
+  position: fixed;
+  top: 42%;
+  display: none;
+  gap: 0.2rem;
+  transform: translateY(-50%);
+  cursor: grab;
+}
+
+.bulb::before {
+  content: "";
+  left: 50%;
+  position: absolute;
+  height: 42vh;
+  width: 2px;
+  background-color: var(--app-black);
+  bottom: 100%;
+}
+
+.tip,
+.demac,
+.holder {
+  width: 20px;
+}
+
+.tip,
+.demac {
+  background-color: var(--bulb-black);
+}
+
+.tip {
+  height: 12px;
+  border-radius: 50px 50px 50% 50%;
+}
+
+.demac {
+  height: 6px;
+}
+
+.argon > * {
+  background-color: var(--secondary-color);
+}
+.argon .holder {
+  height: 18px;
+}
+
+.argon .cirl {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  transform: translateY(-10px);
+}
+
+.cirl::before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background: var(--bulb-light-gradient);
+}
+
+.argon .semi {
+  width: 10px;
+  height: 15px;
+  position: absolute;
+  background-color: black;
+  top: 35%;
+  right: 5px;
+  background: #fff;
+  border-radius: 0 100% 100% 0;
+}
+
+.semi::before {
+  content: "";
+  background-color: var(--secondary-color);
+  width: 100%;
+  height: 80%;
+  top: calc(50% + 1px);
+
+  left: -50%;
+  transform: translateY(-50%);
+  border-radius: 0 100% 100% 0;
+  position: absolute;
+}
+
 aside {
   display: none;
   position: fixed;
 }
+main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 8rem 0;
+  padding: 0 1rem 8rem 1rem;
+}
 
+main > section {
+  grid-column: span 12;
+}
 footer {
   color: #fff;
   background-color: var(--app-black);
@@ -93,15 +217,71 @@ footer {
   header {
     padding: 1rem 2rem;
   }
+  main {
+    padding: 0 2rem 8rem 2rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   header nav ul {
     display: flex;
   }
+  .bulb {
+    display: flex;
+    left: 0;
+  }
 }
 @media screen and (min-width: 1400px) {
   header {
     padding: 1rem 4rem;
   }
+  main {
+    padding: 0 4rem 8rem 4rem;
+  }
+  .bulb {
+    left: calc(var(--lg-screen-space-btw) + 1300px);
+  }
+}
+@media screen and (min-width: 1600px) {
+  .bulb {
+    left: calc(calc(var(--lg-screen-space-btw) + 1300px) + 3.8%);
+  }
+}
+
+.border__hover {
+  position: relative;
+}
+
+.border__hover::before,
+.border__hover::after {
+  content: "";
+  position: absolute;
+  height: 85%;
+  width: 85%;
+  border: 2px solid transparent;
+  top: 27%;
+  right: -10%;
+  z-index: -1;
+  /* transform: translateY(-50%); */
+  border-radius: 8px;
+  transition: clip-path 0.3s;
+}
+.border__hover::before {
+  border-left-color: var(--primary-color);
+  border-top-color: var(--primary-color);
+  clip-path: inset(0px 100px 100px 0px);
+}
+.border__hover::after {
+  border-right-color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  clip-path: inset(100px 0px 0px 100px);
+}
+
+.border__hover:hover::before {
+  clip-path: inset(0px 0px 0px 0px);
+  /* animation:  duration timing-function delay iteration-count direction fill-mode name; */
+}
+.border__hover:hover::after {
+  clip-path: inset(0px 0px 0px 0px);
+  /* animation:  duration timing-function delay iteration-count direction fill-mode name; */
 }
