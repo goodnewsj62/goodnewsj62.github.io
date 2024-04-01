@@ -27,14 +27,32 @@
                 </button>
             </div>
             <nav>
-                <ul>
+                <ul id="nav__links">
                     <!-- slide in underline from both end for hover animation (yellow) -->
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#blog">Blogs</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Reach out</a></li>
-                    <li><a href="#">resume</a></li>
+                    <li>
+                        <div><a href="#services" data-text="Services" onclick="lenis.scrollTo('#services')">Services</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#blog" data-text="Blogs">Blogs</a></div>
+                    </li>
+                    <li>
+                        <div><a href="#projects" data-text="Projects" onclick="lenis.scrollTo('#projects')">Projects</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div><a href="#about" data-text="About" onclick="lenis.scrollTo('#about')">About</a></div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="mailto:goodnewsj62gmail.com" data-text="Reach Out">Reach out</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#" data-text="resume">Resume</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -70,11 +88,12 @@
             <section class="hero">
                 <div class="hero__text">
                     <span class="hello">Hello, I'm</span> <!-- try small text before big -->
-                    <h1>
+                    <h1 class="">
                         Goodnews Osonwa
                     </h1>
-                    <span class="descp">Full stack software developer
-                        <span><!-- animate blinking terminal --></span></span>
+                    <span class="descp">Full stack software <span id="typewriter"></span>
+                        <span id="cursor"><!-- animate blinking terminal --></span>
+                    </span>
 
                     <p>
                         <!-- I enjoy building real world solutions  -->
@@ -84,15 +103,18 @@
                     <div class="header__socials">
                         <ul>
                             <!-- linkendin github x and stackoverflow  -->
-                            <li><a href="">
-                                    <img src="./images/github.svg" alt="">
+                            <li><a href="https://github.com/goodnewsj62" target="_blank">
+                                    <img src="./images/github.svg" alt="github">
                                 </a></li>
-                            <li><a href=""><img src="./images/6704276_linkedin_network_share_social media_icon.svg"
-                                        alt=""></a></li>
-                            <li><a href=""><img src="./images/11244080_x_twitter_elon musk_twitter new logo_icon.svg"
-                                        alt=""></a></li>
-                            <li><a href=""><img src="./images/6541614_logo_overflow_stack_stackoverflow_icon.svg"
-                                        alt=""></a></li>
+                            <li><a href="https://www.linkedin.com/in/goodnews-john-5a28ba245/" target="_blank"><img
+                                        src="./images/6704276_linkedin_network_share_social media_icon.svg"
+                                        alt="linkedin social"></a></li>
+                            <li><a href="https://twitter.com/_osonwa" target="_blank"><img
+                                        src="./images/11244080_x_twitter_elon musk_twitter new logo_icon.svg"
+                                        alt="x social"></a></li>
+                            <li><a href="https://stackoverflow.com/users/14432913/goodnews-john" target="_blank"><img
+                                        src="./images/6541614_logo_overflow_stack_stackoverflow_icon.svg"
+                                        alt="stack overflow"></a></li>
                         </ul>
                     </div>
 
@@ -111,7 +133,7 @@
             </section>
             <section aria-labelledby="services" class="services">
                 <!-- header is small text painted theme color purple -->
-                <h2 id="services" class="section__title">_Services</h2>
+                <h2 id="services" class="section__title" data-text="_Services">_Services</h2>
                 <div class="services__wrapper">
                     <section aria-labelledby="frontend__serv" class="frontend">
                         <h2 id="frontend__serv">Frontend</h2>
@@ -132,7 +154,8 @@
                 </div>
             </section>
             <section aria-labelledby="projects" class="projects">
-                <h2 id="projects" class="section__title">_Project and technologies</h2>
+                <h2 id="projects" class="section__title" data-text="_Project and technologies">_Project and technologies
+                </h2>
                 <div class="projects__wrapper">
                     <div class="main__projects">
                         <div class="_divide">
@@ -317,7 +340,7 @@
             </section>
 
             <section aria-labelledby="about" class="about">
-                <h2 id="about" class="section__title">_About</h2>
+                <h2 id="about" class="section__title" data-text="_About">_About</h2>
                 <div class="about__wrapper">
                     <p>
                         Goodnews Osonwa John is a professional full-stack developer based in Lagos, Nigeria. He started
@@ -358,22 +381,42 @@
             </section>
         </main>
         <footer class="">
-            <!-- dark bg  -->
-            <!-- some yello header text -->
-            <!-- all right reserved here  -->
-            <!-- purple ball follower -->
+
             <div class="footer__wrapper center__on__xl">
-                <div>
+                <div class="reach___out">
                     <h1>Lets talk</h1>
                     <span>
                         Kindly smash the button below to contact me via email
                     </span>
-                    <button></button>
+                    <div class="say__hello">
+                        <a href="mailto:goodnewsj62@gmail.com">
+                            Say Hello!
+                        </a>
+                        <div></div>
+                    </div>
                 </div>
-                <div>
-                    <div>click me!</div>
+                <div class="footer__socials">
+                    <div>
+                        <ul>
+                            <!-- linkendin github x and stackoverflow  -->
+                            <li><a href="https://github.com/goodnewsj62" target="_blank">
+                                    <i class="jam jam-github"></i>
+                                </a></li>
+                            <li><a href="https://www.linkedin.com/in/goodnews-john-5a28ba245/" target="_blank">
+                                    <i class="jam jam-linkedin"></i></a></li>
+                            <li><a href="https://twitter.com/_osonwa" target="_blank"><i
+                                        class="jam jam-twitter"></i></a></li>
+                            <li><a href="https://stackoverflow.com/users/14432913/goodnews-john" target="_blank"><i
+                                        class="jam jam-stackoverflow"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
+                <div class="code__source">
+                    <div>design & built by @_osonwa</div>
+                    <a href="">_source code_</a>
+                </div>
+                <div class="copyright">
+
                     <span>
                         &copy; 2024 _osonwa
                     </span>
@@ -394,5 +437,12 @@
 
     </div> -->
 </body>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+
+<script src="./js/general.js"></script>
 
 </html>

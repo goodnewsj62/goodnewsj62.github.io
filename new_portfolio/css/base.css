@@ -96,6 +96,7 @@ header nav ul {
   font-weight: 500;
 }
 
+/* bulb */
 .bulb,
 .argon {
   position: relative;
@@ -157,7 +158,7 @@ header nav ul {
   transform: translateY(-10px);
 }
 
-.cirl::before {
+/* .cirl::before {
   content: "";
   width: 200%;
   height: 200%;
@@ -167,7 +168,7 @@ header nav ul {
   transform: translate(-50%, -50%);
   position: absolute;
   background: var(--bulb-light-gradient);
-}
+} */
 
 .argon .semi {
   width: 10px;
@@ -193,6 +194,17 @@ header nav ul {
   position: absolute;
 }
 
+.argon :where(.cirl, .holder),
+.semi::before {
+  transition: all 0.5s;
+}
+
+.bulb:hover .argon > :where(.holder, .cirl),
+.bulb:hover .semi::before {
+  background-color: var(--primary-color);
+}
+
+/* sidebar  */
 aside {
   display: none;
   position: fixed;
@@ -211,6 +223,86 @@ footer {
   color: #fff;
   background-color: var(--app-black);
   padding: 6rem 1rem 1rem 1rem;
+}
+
+.footer__wrapper {
+  display: grid;
+  gap: 2rem 0;
+  justify-content: center;
+}
+
+.reach___out {
+  display: grid;
+  gap: 1rem 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.reach___out h1 {
+  color: var(--secondary-color);
+}
+
+.reach___out > * {
+  display: block;
+}
+
+.say__hello {
+  position: relative;
+  height: 50px;
+  width: 130px;
+  margin-bottom: 1rem;
+  justify-self: center;
+}
+.say__hello a {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  padding: 0.8rem;
+  font-weight: bold;
+  position: absolute;
+  z-index: 2;
+}
+
+.say__hello > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  top: 70%;
+  left: -55%;
+  transform: translate3d(50%, -50%, 0);
+  transition: all 0.2s;
+}
+
+.say__hello a:hover ~ div {
+  top: 50%;
+  left: -50%;
+}
+
+.footer__socials ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-size: 1.2rem;
+  justify-content: center;
+  position: relative;
+}
+
+.code__source {
+  text-align: center;
+  font-family: "Fira Code";
+}
+
+.code__source a {
+  font-style: italic;
+}
+
+.copyright {
+  text-align: center;
 }
 
 @media screen and (min-width: 760px) {
@@ -284,4 +376,79 @@ footer {
 .border__hover:hover::after {
   clip-path: inset(0px 0px 0px 0px);
   /* animation:  duration timing-function delay iteration-count direction fill-mode name; */
+}
+
+/* lenis library */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+#nav__links li {
+  position: relative;
+}
+
+#nav__links div {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+#nav__links a {
+  position: relative;
+  top: 0;
+  transition: top 0.4s;
+  padding: 0 2px;
+  display: block;
+}
+
+#nav__links li:hover > div > a {
+  top: -100%;
+}
+
+#nav__links li::before,
+#nav__links li::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.4s;
+}
+
+#nav__links li::after {
+  left: unset;
+  right: 0;
+}
+#nav__links li:hover::before,
+#nav__links li:hover::after {
+  width: 50%;
+}
+
+#nav__links a::before {
+  content: attr(data-text);
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  font-weight: 700;
+  padding: 0 2px;
 }
