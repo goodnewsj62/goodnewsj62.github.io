@@ -22,7 +22,7 @@
                 </a>
             </div>
             <div class="mob__nav">
-                <button type="button">
+                <button type="button" class="mob__bar">
                     <span></span>
                     <span></span>
                 </button>
@@ -66,10 +66,10 @@
                 <div class="semi"></div>
             </div>
         </div>
-        <aside class="side__bar">
+        <aside class="side__bar hide__sidenav">
             <!-- slides in -> -->
-            <div class="mob__close">
-                <button type="button">
+            <div class="mob__nav">
+                <button type="button" class="mob__bar ">
                     <!-- animate x each bar to rotate a little round origin then comeback to origin and stop -->
                     <span></span>
                     <span></span>
@@ -77,11 +77,18 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Reach out</a></li>
-                    <li><a href="#">resume</a></li>
+                    <li><a href="#services" onclick="lenis.scrollTo('#services')" data-hide="true">Services</a></li>
+                    <li><a href="./blogs.html">Blog</a></li>
+                    <li><a href="#projects" onclick="lenis.scrollTo('#projects')" data-hide="true">Projects</a></li>
+                    <li><a href="#about" onclick="lenis.scrollTo('#about')" data-hide="true">About</a></li>
+                    <li><a href="mailto:goodnewsj62@gmail.com">Reach out</a></li>
+                    <li><a href="">resume</a></li>
+                    <li class="side__theme" data-hide="true">
+                        <button type="button" id="toggle__theme">
+                            <span>theme</span>
+                            <span></span>
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </aside>
@@ -454,7 +461,10 @@
         </footer>
     </div>
     <div class="loader">
-
+        <div>
+            <img src="./images/logo.svg" alt="logo">
+        </div>
+        <span>page loading...</span>
     </div>
     <!-- make em pages  <div class="blogs__overlay">
         blog will move in this way ->
