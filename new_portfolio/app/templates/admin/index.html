@@ -1,0 +1,17 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+  <div class="container">
+    <h2>Welcome Osonwa</h2>
+    <div class="container my-3">
+        <ul class="list-group">
+            <li class="list-group-item"><a href="{{url_for('projectsview.index_view')}}">project</a></li>
+
+            <li class="list-group-item list-group-item-secondary"><a href="{{url_for('textsview.index_view')}}">texts</a></li>
+            <li class="list-group-item"><a href="{{url_for('stacksview.index_view')}}">stacks</a></li>
+            <li class="list-group-item list-group-item-secondary"><a a href="{{url_for('blogsview.index_view')}}">blogs</a></li>
+            
+        </ul>
+    </div>
+  </div>
+{% endblock %}
