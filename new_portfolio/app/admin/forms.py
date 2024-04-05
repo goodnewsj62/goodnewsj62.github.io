@@ -9,6 +9,7 @@ class TextForm(Form):
 class ProjectForm(Form):
     title = StringField('title')
     url =  StringField("url")
+    content  = TextAreaField("content")
     category =  SelectField("category", choices=[("client","client") , ("personal", "personal")])
     stack = StringField("stack")
 
@@ -23,6 +24,6 @@ class BlogForm(Form):
     
 class StackForm(Form):
     # {name: "python", image:"",  type:"backend"}
-    name = StringField('platform')
+    name = StringField('name')
     category =  SelectField("category", choices=[("frontend","frontend") , ("backend", "backend")])
     image = StringField("image")

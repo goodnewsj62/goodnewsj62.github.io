@@ -19,7 +19,7 @@ class TextView(CustomModelView):
 
 
 class ProjectView(CustomModelView):
-    column_list = ('title', "url","category", "stack")
+    column_list = ('title', "url","category","content", "stack")
     form = ProjectForm
 
 
