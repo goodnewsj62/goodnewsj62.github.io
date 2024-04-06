@@ -6,6 +6,11 @@
   grid-column: span 12;
 }
 
+.project__info a {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
 .projects__header p {
   font-size: 12px;
 }
