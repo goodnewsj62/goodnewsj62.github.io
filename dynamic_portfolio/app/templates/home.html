@@ -1,0 +1,208 @@
+{% extends "index.html" %}
+
+
+{% block content %}
+    <section class="hero">
+                <div class="hero__text">
+                    <span class="hello">Hello, I'm</span> <!-- try small text before big -->
+                    <h1 class="">
+                        Goodnews Osonwa
+                    </h1>
+                    <span class="descp">Full stack software <span id="typewriter"></span>
+                        <span id="cursor"><!-- animate blinking terminal --></span>
+                    </span>
+
+                    <p>
+                        <!-- I enjoy building real world solutions  -->
+                        {{ctx.header.content}}
+                    </p>
+                    <div class="header__socials">
+                        <ul>
+                            <!-- linkendin github x and stackoverflow  -->
+                            <li><a href="https://github.com/goodnewsj62" target="_blank">
+                                    <svg viewBox="0 0 7.9742475 9.6125774" version="1.1" id="svg1" xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+                                        <defs id="defs1" />
+                                        <g id="layer1" transform="translate(-100.83602,-143.69384)">
+                                            <g id="Layer_3"
+                                                transform="matrix(0.26458333,0,0,0.26458333,96.356863,140.03333)">
+                                                <g id="g4">
+                                                    <g id="Outline_Filled_5_">
+                                                        <path
+                                                            d="m 38.592,50.166 h -4.84 -4.844 c 0,0 0.014,-2.874 0,-4.844 -6.629,1.428 -8.479,-3.633 -8.479,-3.633 -1.21,-2.423 -2.423,-3.633 -2.423,-3.633 -2.423,-1.438 0,-1.21 0,-1.21 2.423,0 3.633,2.423 3.633,2.423 2.126,3.609 5.908,3.028 7.266,2.423 0,-1.21 0.53,-3.042 1.21,-3.633 -5.29,-0.595 -9.693,-3.633 -9.693,-9.689 0,-6.056 1.216,-7.266 2.427,-8.479 -0.244,-0.597 -1.259,-2.805 0.037,-6.056 0,0 2.38,0 4.803,3.633 1.2,-1.2 4.844,-1.21 6.056,-1.21 1.208,0 4.854,0.01 6.054,1.21 2.423,-3.633 4.809,-3.633 4.809,-3.633 1.296,3.251 0.282,5.459 0.037,6.056 1.21,1.21 2.423,2.423 2.423,8.479 0,6.056 -4.397,9.092 -9.689,9.689 0.682,0.591 1.21,2.675 1.21,3.633 z"
+                                                            fill="var(--general-text-color)" id="Cat_1_" />
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a></li>
+                            <li><a href="https://www.linkedin.com/in/goodnews-john-5a28ba245/" target="_blank"><img
+                                        src="{{url_for('static', filename='images/6704276_linkedin_network_share_social media_icon.svg')}}"
+                                        alt="linkedin social"></a></li>
+                            <li><a href="https://twitter.com/_osonwa" target="_blank">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227"
+                                        fill="var(--general-text-color)">
+                                        <g clip-path="url(#clip0_1_2)">
+                                            <path
+                                                d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"
+                                                fill="var(--general-text-color)" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_2">
+                                                <rect width="1200" height="1227" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a></li>
+                            <li><a href="https://stackoverflow.com/users/14432913/goodnews-john" target="_blank"><img
+                                        src="{{url_for('static', filename='images/6541614_logo_overflow_stack_stackoverflow_icon.svg')}}"
+                                        alt="stack overflow"></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="hero__image">
+                    <div class="design">
+                        <!-- absolute positioned svg blob at back of image -->
+                        <img class="my__img" src="{{url_for('static', filename='images/me.png')}}" alt="osonwa">
+                    </div>
+
+                    <!-- lg: scroll animation here -->
+                    <div class="scroll__indicator">
+                        <div></div>
+                    </div>
+                </div>
+            </section>
+            <section aria-labelledby="services" class="services">
+                <!-- header is small text painted theme color purple -->
+                <h2 id="services" class="section__title" data-text="_Services">_Services</h2>
+                <div class="services__wrapper">
+                    <section aria-labelledby="frontend__serv" class="frontend">
+                        <h2 id="frontend__serv">Frontend</h2>
+                        <p class="">
+                        {{ctx.frontend.content}}
+                        </p>
+                    </section>
+                    <section aria-labelledby="backend__serv" class="backend">
+                        <h2 id="backend__serv">Backend</h2>
+                        <p>
+                        {{ctx.backend.content}}
+                        </p>
+                    </section>
+                </div>
+            </section>
+            <section aria-labelledby="projects" class="projects">
+                <h2 id="projects" class="section__title" data-text="_Project and technologies">_Project and technologies
+                </h2>
+                <div class="projects__wrapper">
+                    <div class="main__projects">
+                        <div class="_divide">
+                            <div class="sides side__one">
+                                {% for each in ctx.projects %}
+                                    {% if loop.index < 5 and loop.index % 2 != 0 %}
+                                        <div class="project__content">
+                                            <a href="{{each.url}}">
+                                                <span>link</span>
+                                                <span></span>
+                                            </a>
+                                            <h4>{{each.title}}</h4>
+                                            <p>{{each.content}}</p>
+
+                                            <div class="project__tech">
+                                                {% for stack in each.stack %}
+                                                    <div>{{stack}}</div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <div class="sides side__two">
+                                {% for each in ctx.projects %}
+                                    {% if loop.index < 5 and loop.index % 2 == 0 %}
+                                        <div class="project__content">
+                                            <a href="{{each.url}}">
+                                                <span>link</span>
+                                                <span></span>
+                                            </a>
+                                            <h4>{{each.title}}</h4>
+                                            <p>{{each.content}}</p>
+
+                                            <div class="project__tech">
+                                                {% for stack in each.stack %}
+                                                    <div>{{stack}}</div>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                    {% endfor %}
+                            </div>
+                        </div>
+                        <div class="say__hello see__more__btn">
+                            <a href="{{url_for('basic.projects_view')}}" class=""> see more 👉🏿</a>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="stack">
+                        <h3>Tech stack</h3>
+                        <div class="lg__techlist">
+                            <div class="frontend__stack">
+                                <ul>
+                                    {% for each in ctx.stack  %}
+                                        {% if each.category == "frontend" %}
+                                            <li>
+                                                <div class="img">
+                                                    <img src="{{url_for('static', filename=each.image)}}" alt="">
+                                                </div>
+                                                <h6 class="tool">
+                                                    {{each.name}}
+                                                </h6>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                    
+                                </ul>
+                            </div>
+                            <div class="backend__stack">
+                                <div><i class="jam jam-cogs"></i></div>
+                                <ul>
+                                    {% for each in ctx.stack  %}
+                                        {% if each.category == "backend" %}
+                                            <li>
+                                                <div class="img">
+                                                    <img src="{{url_for('static', filename=each.image)}}" alt="">
+                                                </div>
+                                                <h6 class="tool">
+                                                    {{each.name}}
+                                                </h6>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section aria-labelledby="about" class="about">
+                <h2 id="about" class="section__title" data-text="_About">_About</h2>
+                <div class="about__wrapper">
+                    <p>
+                        {{ctx.about.content | safe}}
+                    </p>
+                    <div>
+                        <div class="img_holder border__hover"></div>
+                    </div>
+                </div>
+
+            </section>
+{% endblock content %}
+
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{url_for('static', filename='js/home.js' )}}"></script>
+{% endblock scripts %}  
