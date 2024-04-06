@@ -283,7 +283,29 @@
     grid-column: span 8;
   }
 
-  .stack {
+  .lg__techlist {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    font-family: "Fira Code";
+  }
+
+  .frontend__stack,
+  .backend__stack {
+    width: auto;
+    flex: 0 1 auto;
+  }
+  .frontend__stack ul,
+  .backend__stack ul {
+    display: flex;
+    gap: 3rem;
+  }
+  .frontend__stack li img,
+  .backend__stack li img {
+    width: 1.8rem;
+  }
+
+  /* .stack {
     margin-top: 0;
     grid-column: span 4;
     height: 100%;
@@ -291,49 +313,31 @@
 
   .stack h3 {
     display: none;
-  }
-  ._divide {
-    display: flex;
-  }
-  .sides {
-    flex-basis: 50%;
-  }
+  } */
 
-  .side__one,
-  .side__two {
-    padding: 0 1rem;
-  }
-
-  .side__one .project__content > * {
-    max-width: 40ch;
-    margin-left: auto;
-  }
-
-  .lg__techlist {
+  /* .lg__techlist {
     display: block;
     height: 100%;
-  }
+  } */
 
-  .frontend__stack,
+  /* .frontend__stack,
   .backend__stack {
     width: 100%;
     border-radius: 30px;
     padding: 4rem 1rem;
     height: 100%;
-    /* background-color: var(--secondary-color); */
     display: flex;
     gap: 1rem;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-  }
-
+  } */
+  /* 
   .stack {
     position: relative;
-  }
+  } */
 
-  .backend__stack {
-    /* color: #fff; */
+  /* .backend__stack {
     background: var(--secondary-color);
     clip-path: circle(12% at 100% 0%);
     position: absolute;
@@ -358,9 +362,9 @@
     cursor: pointer;
     display: grid;
     place-items: center;
-  }
+  } */
 
-  .backend__stack .jam {
+  /* .backend__stack .jam {
     font-size: 1.5rem;
   }
 
@@ -390,7 +394,7 @@
   .frontend__stack li img,
   .backend__stack li img {
     width: 1.8rem;
-  }
+  } */
 }
 
 @media screen and (min-width: 1400px) {
