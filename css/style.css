@@ -79,7 +79,7 @@
 
 @media screen and (min-width: 760px) {
   .hero__text h1 {
-    font-size: 60px;
+    font-size: 58px;
   }
 }
 
@@ -117,7 +117,7 @@
     padding: 6rem 0rem;
   }
   .hero__text h1 {
-    font-size: 60px;
+    font-size: 58px;
   }
 
   .hero__image img {
