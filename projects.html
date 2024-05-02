@@ -1,601 +1,760 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="goodnewsj62@gmail.com">
-  <link rel="stylesheet" href="./css/base.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/projects.css">
-  <link rel="stylesheet" href="./css/jam.min.css">
-  <link rel="icon" type="image/png" href="./images/logob.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="goodnewsj62@gmail.com" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/projects.css" />
+    <link rel="stylesheet" href="./css/jam.min.css" />
+    <link rel="icon" type="image/png" href="./images/logob.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    />
 
     <!-- Primary Meta Tags -->
     <title>Osonwa Projects</title>
     <meta name="title" content="Osonwa Projects" />
-    <meta name="description" content="Osonwa Projects website -  My journey,  My projects,My stack.  Full stack software developer." />
+    <meta
+      name="description"
+      content="Osonwa Projects website -  My journey,  My projects,My stack.  Full stack software developer."
+    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dev.osonwa.com" />
     <meta property="og:title" content="Osonwa Projects" />
-    <meta property="og:description" content="Osonwa Projects website -  My journey,  My projects,My stack.  Full stack software developer." />
-    <meta property="og:image" content="https://dev.osonwa.com/images/IMG_6058.jpg" />
+    <meta
+      property="og:description"
+      content="Osonwa Projects website -  My journey,  My projects,My stack.  Full stack software developer."
+    />
+    <meta
+      property="og:image"
+      content="https://dev.osonwa.com/images/IMG_6058.jpg"
+    />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://dev.osonwa.com" />
     <meta property="twitter:title" content="Osonwa Projects" />
-    <meta property="twitter:description" content="Osonwa Projects website -  My journey,  My projects,My stack.  Full stack software developer." />
-    <meta property="twitter:image" content="https://dev.osonwa.com/images/IMG_6058.jpg" />
+    <meta
+      property="twitter:description"
+      content="Osonwa Projects website -  My journey,  My projects,My stack.  Full stack software developer."
+    />
+    <meta
+      property="twitter:image"
+      content="https://dev.osonwa.com/images/IMG_6058.jpg"
+    />
 
-</head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VG2K3JN7SV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<body data-theme="dark">
-  <div class="container">
-    <header class="head__container center__on__xl">
-      <div class="logo">
-        <a href="./index.html">
-          <img src="./images/logo.svg" class="logo__dark" alt="">
-          <img src="./images/logof.png" class="logo__white" alt="">
-          <h2>Sonwa</h2>
-        </a>
+      gtag("config", "G-VG2K3JN7SV");
+    </script>
+  </head>
+
+  <body data-theme="dark">
+    <div class="container">
+      <header class="head__container center__on__xl">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./images/logo.svg" class="logo__dark" alt="" />
+            <img src="./images/logof.png" class="logo__white" alt="" />
+            <h2>Sonwa</h2>
+          </a>
+        </div>
+        <div class="mob__nav">
+          <button type="button" class="mob__bar">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <nav>
+          <ul id="nav__links">
+            <!-- slide in underline from both end for hover animation (yellow) -->
+            <li>
+              <div>
+                <a
+                  href="#services"
+                  data-text="Services"
+                  onclick="lenis.scrollTo('#services')"
+                  >Services</a
+                >
+              </div>
+            </li>
+            <li>
+              <div><a href="./blogs.html" data-text="Blogs">Blogs</a></div>
+            </li>
+            <li>
+              <div>
+                <a href="./projects.html" data-text="Projects">Projects</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="./index.html#about" data-text="About">About</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="mailto:goodnewsj62gmail.com" data-text="Reach Out"
+                  >Reach out</a
+                >
+              </div>
+            </li>
+            <li>
+              <div>
+                <a
+                  href="https://docs.google.com/document/d/1W-YY_JTgClHZ9x3tWnCuuHHhlpAykNdLgDSEjP_vmLI/edit?usp=sharing"
+                  data-text="resume"
+                  >Resume</a
+                >
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="bulb">
+        <div class="tip"></div>
+        <div class="demac"></div>
+        <div class="argon">
+          <div class="holder"></div>
+          <div class="cirl"></div>
+          <div class="semi"></div>
+        </div>
       </div>
-      <div class="mob__nav">
-        <button type="button" class="mob__bar">
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-      <nav>
-        <ul id="nav__links">
-          <!-- slide in underline from both end for hover animation (yellow) -->
-          <li>
-            <div><a href="#services" data-text="Services" onclick="lenis.scrollTo('#services')">Services</a>
+      <aside class="side__bar hide__sidenav">
+        <!-- slides in -> -->
+        <div class="mob__nav">
+          <button type="button" class="mob__bar">
+            <!-- animate x each bar to rotate a little round origin then comeback to origin and stop -->
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="./index.html#services" data-hide="true">Services</a>
+            </li>
+            <li><a href="./blogs.html">Blog</a></li>
+            <li>
+              <a
+                href="./projects.html"
+                onclick="lenis.scrollTo('#projects')"
+                data-hide="true"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="./index.html#about"
+                onclick="lenis.scrollTo('#about')"
+                data-hide="true"
+                >About</a
+              >
+            </li>
+            <li><a href="mailto:goodnewsj62@gmail.com">Reach out</a></li>
+            <li>
+              <a
+                href="https://docs.google.com/document/d/1W-YY_JTgClHZ9x3tWnCuuHHhlpAykNdLgDSEjP_vmLI/edit?usp=sharing"
+                >resume</a
+              >
+            </li>
+            <li class="side__theme" data-hide="true">
+              <button type="button" id="toggle__theme">
+                <span>theme</span>
+                <span></span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="center__on__xl project__main">
+        <div class="projects__header">
+          <h1>Projects 🔥</h1>
+          <p>Most of the projects i've worked on in the past</p>
+        </div>
+        <div>
+          <div class="switch">
+            <button type="button " class="switch__active">
+              Client Projects</button
+            ><button type="button">Personal & Opensource</button>
+          </div>
+          <section class="project__display">
+            <div class="project__card">
+              <div class="project__info">
+                <a href="https://kwikaccess.com" target="_blank">visit</a>
+                <h2>Kwikacccess</h2>
+                <p>
+                  An event/facility management system integrated with a smart
+                  door system used to schedule and manage guest invite.
+                </p>
+                <ul class="project__stack">
+                  <li>Typescript</li>
+                  <li>Python</li>
+                  <li>Django Rest</li>
+                  <li>Reactjs</li>
+                  <div>Materials UI</div>
+                  <div>Tailwindcss</div>
+                  <li>Postgresql</li>
+                  <li>MYSQL</li>
+                  <li>Linux</li>
+                  <li>Redis</li>
+                  <li>Docker</li>
+                  <li>Celery</li>
+                </ul>
+              </div>
+              <div class="project__image">
+                <div class="project__swiper">
+                  <div
+                    style="
+                      --swiper-navigation-color: #fff;
+                      --swiper-pagination-color: #fff;
+                    "
+                    class="swiper mySwiper2"
+                  >
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/kwikaccess.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/kwikaccess2.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/kwikaccess3.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="image__picker">
+                  <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/kwikaccess.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/kwikaccess2.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/kwikaccess3.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </li>
-          <li>
-            <div><a href="./blogs.html" data-text="Blogs">Blogs</a></div>
-          </li>
-          <li>
-            <div><a href="./projects.html" data-text="Projects">Projects</a>
+            <div class="project__card">
+              <div class="project__info">
+                <a href="https://nuodal.com" target="_blank">visit</a>
+                <h2>Nuodal Call to Prayer</h2>
+                <p>
+                  A call to prayer application that automatically streams prayer
+                  MP3s to registered speakers during prayer time based on the
+                  user's region (timezone)
+                </p>
+                <ul class="project__stack">
+                  <li>Typescript</li>
+                  <li>Python</li>
+                  <li>Django Rest</li>
+                  <li>Reactjs</li>
+                  <li>Postgresql</li>
+                  <li>MYSQL</li>
+                  <li>Linux</li>
+                  <li>Redis</li>
+                  <li>Docker</li>
+                  <li>Celery</li>
+                </ul>
+              </div>
+              <div class="project__image">
+                <div class="project__swiper">
+                  <div
+                    style="
+                      --swiper-navigation-color: #fff;
+                      --swiper-pagination-color: #fff;
+                    "
+                    class="swiper mySwiper2"
+                  >
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/nuodal1.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/nuodal2.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="image__picker">
+                  <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/nuodal1.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/nuodal2.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </li>
-          <li>
-            <div><a href="./index.html#about" data-text="About">About</a></div>
-          </li>
-          <li>
+            <div class="project__card">
+              <div class="project__info">
+                <a href="" target="_blank">visit</a>
+                <h2>2mins tv</h2>
+                <p>
+                  A video streaming platform, where users can upload, watch, and
+                  save videos
+                </p>
+                <ul class="project__stack">
+                  <li>Typescript</li>
+                  <li>Python</li>
+                  <li>Flask</li>
+                  <li>Marshmallow</li>
+                  <li>Reactjs</li>
+                  <li>Postgresql</li>
+                  <li>Docker</li>
+                </ul>
+              </div>
+              <div class="project__image">
+                <div class="project__swiper">
+                  <div
+                    style="
+                      --swiper-navigation-color: #fff;
+                      --swiper-pagination-color: #fff;
+                    "
+                    class="swiper mySwiper2"
+                  >
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/mins1.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/mins2.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/mins3.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="image__picker">
+                  <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/mins1.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/mins2.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/mins3.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project__card">
+              <div class="project__info">
+                <a href="https://schoolsetal.com" target="_blank">visit</a>
+                <h2>schoolsetal</h2>
+                <p>
+                  A web app that helps parents find schools for their child or
+                  children from curated and processed information.
+                </p>
+                <ul class="project__stack">
+                  <li>Python</li>
+                  <li>Django Rest</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Jquery</li>
+                  <li>Postgresql</li>
+                </ul>
+              </div>
+              <div class="project__image">
+                <div class="project__swiper">
+                  <div
+                    style="
+                      --swiper-navigation-color: #fff;
+                      --swiper-pagination-color: #fff;
+                    "
+                    class="swiper mySwiper2"
+                  >
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/schools1.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/schools2.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/schools3.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/schools4.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="image__picker">
+                  <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/schools1.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/schools2.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/schools3.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/schools4.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project__card">
+              <div class="project__info">
+                <a href="https://hausba.com" target="_blank">visit</a>
+                <h2>Hausba AVR design system</h2>
+                <p>A software to automate design planing of smart homes</p>
+                <ul class="project__stack">
+                  <li>Python</li>
+                  <li>Django Rest</li>
+                  <li>Redis</li>
+                  <li>Docker</li>
+                  <li>Odoo</li>
+                  <li>Postgresql</li>
+                </ul>
+              </div>
+              <div class="project__image">
+                <div class="project__swiper">
+                  <div
+                    style="
+                      --swiper-navigation-color: #fff;
+                      --swiper-pagination-color: #fff;
+                    "
+                    class="swiper mySwiper2"
+                  >
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/def.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="image__picker">
+                  <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/def.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project__card">
+              <div class="project__info">
+                <a href="" target="_blank">visit</a>
+                <h2>Nuodal Mygateman</h2>
+                <p>
+                  A Estate management platform and automatic gate unlock system
+                  by recognizing plate numbers
+                </p>
+                <ul class="project__stack">
+                  <li>Python</li>
+                  <li>Django Rest</li>
+                  <li>Redis</li>
+                  <li>celery</li>
+                  <li>Postgresql</li>
+                </ul>
+              </div>
+              <div class="project__image">
+                <div class="project__swiper">
+                  <div
+                    style="
+                      --swiper-navigation-color: #fff;
+                      --swiper-pagination-color: #fff;
+                    "
+                    class="swiper mySwiper2"
+                  >
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/def.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="image__picker">
+                  <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/def.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project__card">
+              <div class="project__info">
+                <a href="https://hischolar.uobis.com" target="_blank">visit</a>
+                <h2>Hischolar</h2>
+                <p>Internet book center</p>
+                <ul class="project__stack">
+                  <li>Python</li>
+                  <li>Flask</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Javascript</li>
+                </ul>
+              </div>
+              <div class="project__image">
+                <div class="project__swiper">
+                  <div
+                    style="
+                      --swiper-navigation-color: #fff;
+                      --swiper-pagination-color: #fff;
+                    "
+                    class="swiper mySwiper2"
+                  >
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/def.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="image__picker">
+                  <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/def.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="project__display inactive__side">
+            <div class="project__card">
+              <div class="project__info">
+                <a
+                  href="https://github.com/goodnewsj62/django-dynamic-host"
+                  target="_blank"
+                  >visit</a
+                >
+                <h2>django-dynamic-host</h2>
+                <p>
+                  A djaango middle-ware library that helps you validate
+                  hostname(origin of client) trying to reach your application
+                  dynamically. Django dynamic host helps by-pass the
+                  ALLOWED_HOST settings which is restricted to a constant
+                  manually added value of hostnames
+                </p>
+                <ul class="project__stack">
+                  <li>Python</li>
+                  <li>Django</li>
+                </ul>
+              </div>
+              <div class="project__image">
+                <div class="project__swiper">
+                  <div
+                    style="
+                      --swiper-navigation-color: #fff;
+                      --swiper-pagination-color: #fff;
+                    "
+                    class="swiper mySwiper2"
+                  >
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/github.jpg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="image__picker">
+                  <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/github.jpg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project__card">
+              <div class="project__info">
+                <a
+                  href="https://github.com/Sourcepride/react-component-profiler"
+                  target="_blank"
+                  >visit</a
+                >
+                <h2>react-component-profiler</h2>
+                <p>
+                  A vscode extension that provide statical information of your
+                  component.
+                </p>
+                <ul class="project__stack">
+                  <li>Typescript</li>
+                  <li>nodejs</li>
+                </ul>
+              </div>
+              <div class="project__image">
+                <div class="project__swiper">
+                  <div
+                    style="
+                      --swiper-navigation-color: #fff;
+                      --swiper-pagination-color: #fff;
+                    "
+                    class="swiper mySwiper2"
+                  >
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/github.jpg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="image__picker">
+                  <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/github.jpg" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project__card">
+              <div class="project__info">
+                <a href="" target="_blank">visit</a>
+                <h2>Osonwa Aggregate News & blog web</h2>
+                <p>An aggregate news and blog web application.</p>
+                <ul class="project__stack">
+                  <li>Javascript</li>
+                  <li>Python</li>
+                  <li>Django Rest</li>
+                  <li>Reactjs</li>
+                  <li>Postgresql</li>
+                  <li>Linux</li>
+                  <li>Redis</li>
+                  <li>Docker</li>
+                  <li>Celery</li>
+                </ul>
+              </div>
+              <div class="project__image">
+                <div class="project__swiper">
+                  <div
+                    style="
+                      --swiper-navigation-color: #fff;
+                      --swiper-pagination-color: #fff;
+                    "
+                    class="swiper mySwiper2"
+                  >
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/def.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="image__picker">
+                  <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="./images/def.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="">
+        <div class="footer__wrapper center__on__xl">
+          <div class="reach___out">
+            <h1>Lets talk</h1>
+            <span> Kindly smash the button below to contact me via email </span>
+            <div class="say__hello">
+              <a href="mailto:goodnewsj62@gmail.com"> Say Hello! </a>
+              <div></div>
+            </div>
+          </div>
+          <div class="footer__socials">
             <div>
-              <a href="mailto:goodnewsj62gmail.com" data-text="Reach Out">Reach out</a>
+              <ul>
+                <!-- linkendin github x and stackoverflow  -->
+                <li>
+                  <a href="https://github.com/goodnewsj62" target="_blank">
+                    <i class="jam jam-github"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/goodnews-john-5a28ba245/"
+                    target="_blank"
+                  >
+                    <i class="jam jam-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/_osonwa" target="_blank"
+                    ><i class="jam jam-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://stackoverflow.com/users/14432913/goodnews-john"
+                    target="_blank"
+                    ><i class="jam jam-stackoverflow"></i
+                  ></a>
+                </li>
+              </ul>
             </div>
-          </li>
-          <li>
-            <div>
-              <a href="https://docs.google.com/document/d/1W-YY_JTgClHZ9x3tWnCuuHHhlpAykNdLgDSEjP_vmLI/edit?usp=sharing" data-text="resume">Resume</a>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div class="bulb">
-      <div class="tip"></div>
-      <div class="demac"></div>
-      <div class="argon">
-        <div class="holder"></div>
-        <div class="cirl"></div>
-        <div class="semi"></div>
-      </div>
+          </div>
+          <div class="code__source">
+            <div>design & built by @_osonwa</div>
+            <a href="https://github.com/goodnewsj62/myportfolio"
+              >_source code_</a
+            >
+          </div>
+          <div class="copyright">
+            <span> &copy; 2024 _osonwa </span>
+          </div>
+        </div>
+      </footer>
     </div>
-    <aside class="side__bar hide__sidenav">
-      <!-- slides in -> -->
-      <div class="mob__nav">
-        <button type="button" class="mob__bar ">
-          <!-- animate x each bar to rotate a little round origin then comeback to origin and stop -->
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="./index.html#services" data-hide="true">Services</a></li>
-          <li><a href="./blogs.html">Blog</a></li>
-          <li><a href="./projects.html" onclick="lenis.scrollTo('#projects')" data-hide="true">Projects</a></li>
-          <li><a href="./index.html#about" onclick="lenis.scrollTo('#about')" data-hide="true">About</a></li>
-          <li><a href="mailto:goodnewsj62@gmail.com">Reach out</a></li>
-          <li><a href="https://docs.google.com/document/d/1W-YY_JTgClHZ9x3tWnCuuHHhlpAykNdLgDSEjP_vmLI/edit?usp=sharing">resume</a></li>
-          <li class="side__theme" data-hide="true">
-            <button type="button" id="toggle__theme">
-              <span>theme</span>
-              <span></span>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-    <main class="center__on__xl  project__main">
-      <div class="projects__header">
-        <h1>
-          Projects 🔥
-        </h1>
-        <p>Most of the projects i've worked on in the past</p>
-      </div>
+    <div class="loader">
       <div>
-        <div class="switch">
-          <button type="button " class="switch__active">Client Projects</button><button type="button">Personal &
-            Opensource</button>
-        </div>
-        <section class="project__display">
-          <div class="project__card">
-            <div class="project__info">
-              <a href="https://kwikaccess.com" target="_blank">visit</a>
-              <h2>Kwikacccess</h2>
-              <p>An event/facility management system integrated with a smart door system used to schedule and manage
-                guest invite.</p>
-              <ul class="project__stack">
-                <li>Typescript</li>
-                <li>Python</li>
-                <li>Django Rest</li>
-                <li>Reactjs</li>
-                <div>Materials UI</div>
-                <div>Tailwindcss</div>
-                <li>Postgresql</li>
-                <li>MYSQL</li>
-                <li>Linux</li>
-                <li>Redis</li>
-                <li>Docker</li>
-                <li>Celery</li>
-              </ul>
-            </div>
-            <div class="project__image">
-              <div class="project__swiper">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/kwikaccess.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./images/kwikaccess2.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./images/kwikaccess3.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="image__picker">
-                <div thumbsSlider="" class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/kwikaccess.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./images/kwikaccess2.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./images/kwikaccess3.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="project__card">
-            <div class="project__info">
-              <a href="https://nuodal.com" target="_blank">visit</a>
-              <h2>Nuodal Call to Prayer</h2>
-              <p>A call to prayer application that automatically streams prayer MP3s to registered speakers during
-                prayer time based on the user's region (timezone)</p>
-              <ul class="project__stack">
-                <li>Typescript</li>
-                <li>Python</li>
-                <li>Django Rest</li>
-                <li>Reactjs</li>
-                <li>Postgresql</li>
-                <li>MYSQL</li>
-                <li>Linux</li>
-                <li>Redis</li>
-                <li>Docker</li>
-                <li>Celery</li>
-              </ul>
-            </div>
-            <div class="project__image">
-              <div class="project__swiper">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/nuodal1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./images/nuodal2.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="image__picker">
-                <div thumbsSlider="" class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/nuodal1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./images/nuodal2.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="project__card">
-            <div class="project__info">
-              <a href="" target="_blank">visit</a>
-              <h2>2mins tv</h2>
-              <p>A video streaming platform, where users can upload, watch, and save videos </p>
-              <ul class="project__stack">
-                <li>Typescript</li>
-                <li>Python</li>
-                <li>Flask</li>
-                <li>Marshmallow</li>
-                <li>Reactjs</li>
-                <li>Postgresql</li>
-                <li>Docker</li>
-              </ul>
-            </div>
-            <div class="project__image">
-              <div class="project__swiper">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/mins1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./images/mins2.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./images/mins3.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="image__picker">
-                <div thumbsSlider="" class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/mins1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./images/mins2.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./images/mins3.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="project__card">
-            <div class="project__info">
-              <a href="https://schoolsetal.com" target="_blank">visit</a>
-              <h2>schoolsetal</h2>
-              <p>A web app that helps parents find schools for their child or children from curated and processed
-                information.</p>
-              <ul class="project__stack">
-                <li>Python</li>
-                <li>Django Rest</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Jquery</li>
-                <li>Postgresql</li>
-              </ul>
-            </div>
-            <div class="project__image">
-              <div class="project__swiper">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/schools1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./images/schools2.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./images/schools3.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./images/schools4.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="image__picker">
-                <div thumbsSlider="" class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/schools1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./images/schools2.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./images/schools3.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./images/schools4.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="project__card">
-            <div class="project__info">
-              <a href="https://hausba.com" target="_blank">visit</a>
-              <h2>Hausba AVR design system</h2>
-              <p>A software to automate design planing of smart homes</p>
-              <ul class="project__stack">
-                <li>Python</li>
-                <li>Django Rest</li>
-                <li>Redis</li>
-                <li>Docker</li>
-                <li>Odoo</li>
-                <li>Postgresql</li>
-              </ul>
-            </div>
-            <div class="project__image">
-              <div class="project__swiper">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/def.png" />
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="image__picker">
-                <div thumbsSlider="" class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/def.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="project__card">
-            <div class="project__info">
-              <a href="" target="_blank">visit</a>
-              <h2>Nuodal Mygateman</h2>
-              <p>A Estate management platform and automatic gate unlock system by recognizing plate numbers</p>
-              <ul class="project__stack">
-                <li>Python</li>
-                <li>Django Rest</li>
-                <li>Redis</li>
-                <li>celery</li>
-                <li>Postgresql</li>
-              </ul>
-            </div>
-            <div class="project__image">
-              <div class="project__swiper">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/def.png" />
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="image__picker">
-                <div thumbsSlider="" class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/def.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="project__card">
-            <div class="project__info">
-              <a href="https://hischolar.uobis.com" target="_blank">visit</a>
-              <h2>Hischolar</h2>
-              <p>Internet book center</p>
-              <ul class="project__stack">
-                <li>Python</li>
-                <li>Flask</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-              </ul>
-            </div>
-            <div class="project__image">
-              <div class="project__swiper">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/def.png" />
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="image__picker">
-                <div thumbsSlider="" class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/def.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </section>
-
-        <section class="project__display inactive__side">
-          <div class="project__card">
-            <div class="project__info">
-              <a href="https://github.com/goodnewsj62/django-dynamic-host" target="_blank">visit</a>
-              <h2>django-dynamic-host</h2>
-              <p>A djaango middle-ware library that helps you validate hostname(origin of client) trying to reach your
-                application dynamically. Django dynamic host helps by-pass the ALLOWED_HOST settings which is restricted
-                to a constant manually added value of hostnames</p>
-              <ul class="project__stack">
-                <li>Python</li>
-                <li>Django</li>
-              </ul>
-            </div>
-            <div class="project__image">
-              <div class="project__swiper">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <img src="./images/github.jpg" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="image__picker">
-                <div thumbsSlider="" class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/github.jpg" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="project__card">
-            <div class="project__info">
-              <a href="https://github.com/Sourcepride/react-component-profiler" target="_blank">visit</a>
-              <h2>react-component-profiler</h2>
-              <p>A vscode extension that provide statical information of your component.</p>
-              <ul class="project__stack">
-                <li>Typescript</li>
-                <li>nodejs</li>
-              </ul>
-            </div>
-            <div class="project__image">
-              <div class="project__swiper">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <img src="./images/github.jpg" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="image__picker">
-                <div thumbsSlider="" class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/github.jpg" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="project__card">
-            <div class="project__info">
-              <a href="" target="_blank">visit</a>
-              <h2>Osonwa Aggregate News & blog web</h2>
-              <p>An aggregate news and blog web application.</p>
-              <ul class="project__stack">
-                <li>Javascript</li>
-                <li>Python</li>
-                <li>Django Rest</li>
-                <li>Reactjs</li>
-                <li>Postgresql</li>
-                <li>Linux</li>
-                <li>Redis</li>
-                <li>Docker</li>
-                <li>Celery</li>
-              </ul>
-            </div>
-            <div class="project__image">
-              <div class="project__swiper">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-                  <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                      <img src="./images/def.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="image__picker">
-                <div thumbsSlider="" class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./images/def.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <img src="./images/logo.svg" alt="logo" />
       </div>
-    </main>
-    <footer class="">
-
-      <div class="footer__wrapper center__on__xl">
-        <div class="reach___out">
-          <h1>Lets talk</h1>
-          <span>
-            Kindly smash the button below to contact me via email
-          </span>
-          <div class="say__hello">
-            <a href="mailto:goodnewsj62@gmail.com">
-              Say Hello!
-            </a>
-            <div></div>
-          </div>
-        </div>
-        <div class="footer__socials">
-          <div>
-            <ul>
-              <!-- linkendin github x and stackoverflow  -->
-              <li><a href="https://github.com/goodnewsj62" target="_blank">
-                  <i class="jam jam-github"></i>
-                </a></li>
-              <li><a href="https://www.linkedin.com/in/goodnews-john-5a28ba245/" target="_blank">
-                  <i class="jam jam-linkedin"></i></a></li>
-              <li><a href="https://twitter.com/_osonwa" target="_blank"><i class="jam jam-twitter"></i></a></li>
-              <li><a href="https://stackoverflow.com/users/14432913/goodnews-john" target="_blank"><i
-                    class="jam jam-stackoverflow"></i></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="code__source">
-          <div>design & built by @_osonwa</div>
-          <a href="https://github.com/goodnewsj62/myportfolio">_source code_</a>
-        </div>
-        <div class="copyright">
-          <span>
-            &copy; 2024 _osonwa
-          </span>
-        </div>
-      </div>
-    </footer>
-  </div>
-  <div class="loader">
-    <div>
-      <img src="./images/logo.svg" alt="logo">
+      <span>page loading...</span>
     </div>
-    <span>page loading...</span>
-  </div>
-  <!-- make em pages  <div class="blogs__overlay">
+    <!-- make em pages  <div class="blogs__overlay">
         blog will move in this way ->
         two top articles side by side   _ - 
         lsit of blog platfoems
@@ -605,53 +764,51 @@
         minimal list of projects and what they are about
 
     </div> -->
-</body>
-<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 
+  <script src="./js/general.js"></script>
 
-<script src="./js/general.js"></script>
-
-
-
-<!-- Initialize Swiper -->
-<script>
-  Array.from(document.querySelectorAll(".project__image")).forEach((item) => {
-    var swiper = new Swiper(item.querySelector(".mySwiper"), {
-      loop: true,
-      spaceBetween: 10,
-      slidesPerView: 4,
-      freeMode: true,
-      watchSlidesProgress: true,
+  <!-- Initialize Swiper -->
+  <script>
+    Array.from(document.querySelectorAll(".project__image")).forEach((item) => {
+      var swiper = new Swiper(item.querySelector(".mySwiper"), {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(item.querySelector(".mySwiper2"), {
+        loop: true,
+        spaceBetween: 10,
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
     });
-    var swiper2 = new Swiper(item.querySelector(".mySwiper2"), {
-      loop: true,
-      spaceBetween: 10,
-      // navigation: {
-      //   nextEl: ".swiper-button-next",
-      //   prevEl: ".swiper-button-prev",
-      // },
-      thumbs: {
-        swiper: swiper,
-      },
+
+    const switchBtn = Array.from(document.querySelectorAll(".switch button"));
+    switchBtn.forEach((el) => {
+      el.addEventListener("click", (e) => {
+        if (!e.target.classList.contains("switch__active")) {
+          switchBtn.forEach((ele) => {
+            ele.classList.toggle("switch__active");
+          });
+
+          Array.from(document.querySelectorAll(".project__display")).forEach(
+            (ele) => ele.classList.toggle("inactive__side")
+          );
+        }
+      });
     });
-  });
-
-  const switchBtn = Array.from(document.querySelectorAll(".switch button"));
-  switchBtn.forEach((el) => {
-    el.addEventListener("click", (e) => {
-      if (!e.target.classList.contains("switch__active")) {
-        switchBtn.forEach((ele) => {
-          ele.classList.toggle("switch__active")
-        });
-
-        Array.from(document.querySelectorAll(".project__display")).forEach((ele) => ele.classList.toggle("inactive__side"))
-      }
-    });
-  });
-</script>
-
+  </script>
 </html>
